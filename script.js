@@ -7,14 +7,13 @@ const personalMovieDB = {
   provet: false    
 };
 
-let lastMovie1 = prompt('Один из последних просмотренных фильмов?','');
-let gradeMovie1 = +prompt('На сколько оцените его?','');
+ const a = prompt('Один из последних просмотренных фильмов?',''),
+       b = +prompt('На сколько оцените его?',''),
+       c = prompt('Один из последних просмотренных фильмов?',''),
+       d = +prompt('На сколько оцените его?','');
 
-let lastMovie2 = prompt('Один из последних просмотренных фильмов?','');
-let gradeMovie2 = +prompt('На сколько оцените его?','');
-
-personalMovieDB.movies[lastMovie1] = gradeMovie1;
-personalMovieDB.movies[lastMovie2] = gradeMovie2;
+personalMovieDB.movies[a] = b;
+personalMovieDB.movies[c] = d;
 
 
 
