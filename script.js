@@ -11,16 +11,19 @@ const personalMovieDB = {
   provet: false    
 };
 
-for (let i = 1; i < 3; i++) {
+for (let i = 0; i < 2; i++) {
   let lastMovie = prompt('Один из последних просмотренных фильмов?','');
-  if (lastMovie == '' || lastMovie == null || lastMovie.length == 51) {
-    i--;
+  if (lastMovie == '' || lastMovie == null || lastMovie.length > 50) {
+    i--; 
+    continue;
   }
   for (let k = 0; k < 1; k++) {
     let gradeMovie = +prompt('На сколько оцените его?','');
+    if (isNaN(gradeMovie) || gradeMovie == 0) {
+      k--;
+    }
     personalMovieDB.movies[lastMovie] = gradeMovie;
   }
-  
 }
   
   
