@@ -1,9 +1,6 @@
 let numberOfFilms;
-while (numberOfFilms == undefined || numberOfFilms == ' ') {
+while (numberOfFilms == undefined || numberOfFilms == ' ' || numberOfFilms == 0 || isNaN(numberOfFilms)) {
   numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');
-  if (numberOfFilms == 0) {
-    break;
-  }
 }
 
 const personalMovieDB = {
