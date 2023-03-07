@@ -54,7 +54,7 @@ function showMyDB() {
 
 function writeYourGenres() {
   for (let i = 0; i < 3; i++) {
-    personalMovieDB.genres[i] = prompt('Ваш любимый жанр?')
+    personalMovieDB.genres[i] = prompt(`Ваш любимый жанр? Под номером: ${i + 1}`)
     if (personalMovieDB.genres[i] == null || personalMovieDB.genres[i] == '' || Number(+personalMovieDB.genres[i])) {
       i--;
     }
