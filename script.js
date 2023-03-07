@@ -1,4 +1,17 @@
+'use strict';
+
 let numberOfFilms;
+const personalMovieDB = {
+  count: numberOfFilms,
+  movies: {},
+  actors: {},
+  genres: [],
+  privet: false    
+};
+
+start();
+rememberMyFilms();
+detectPersonalLevel();
 
 function start() {
   while (numberOfFilms == null || numberOfFilms == undefined || numberOfFilms == '' || numberOfFilms == 0 || isNaN(numberOfFilms)) {
@@ -6,15 +19,6 @@ function start() {
   } 
 }
 
-start();
-
-const personalMovieDB = {
-  count: numberOfFilms,
-  movies: {},
-  actors: {},
-  genres: [],
-  provet: false    
-};
 function rememberMyFilms() {
   for (let i = 0; i < 2; i++) {
     let lastMovie = prompt('Один из последних просмотренных фильмов?','');
@@ -31,7 +35,7 @@ function rememberMyFilms() {
     }
   }
 }
-rememberMyFilms();
+
 function detectPersonalLevel() {
   if (personalMovieDB.count < 10) {
     alert('Просмотренно довольно мало фильмов');
@@ -42,7 +46,7 @@ function detectPersonalLevel() {
   }
 }
 
-detectPersonalLevel();
+
 
 
   
