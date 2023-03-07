@@ -12,6 +12,7 @@ const personalMovieDB = {
 start();
 rememberMyFilms();
 detectPersonalLevel();
+showMyDB();
 
 function start() {
   while (numberOfFilms == null || numberOfFilms == undefined || numberOfFilms == '' || numberOfFilms == 0 || isNaN(numberOfFilms)) {
@@ -46,6 +47,10 @@ function detectPersonalLevel() {
   }
 }
 
+function showMyDB() {
+  if (!personalMovieDB.privet) console.log(personalMovieDB);
+}
+
 
 
 
@@ -53,6 +58,6 @@ function detectPersonalLevel() {
 
 
 
-console.log(personalMovieDB);
+
 
 
