@@ -9,9 +9,9 @@ const personalMovieDB = {
   privet: false    
 };
 
-// start();
-// rememberMyFilms();
-// detectPersonalLevel();
+start();
+rememberMyFilms();
+detectPersonalLevel();
 writeYourGenres();
 showMyDB();
 
@@ -23,7 +23,7 @@ function start() {
 
 function rememberMyFilms() {
   for (let i = 0; i < 2; i++) {
-    let lastMovie = prompt('Один из последних просмотренных фильмов?','');
+    let lastMovie = prompt('Один из последних просмотренных фильмов?','').trim();
     if (lastMovie == '' || lastMovie == null || lastMovie.length > 50) {
       i--; 
       continue;
@@ -54,7 +54,7 @@ function showMyDB() {
 
 function writeYourGenres() {
   for (let i = 0; i < 3; i++) {
-    personalMovieDB.genres[i] = prompt(`Ваш любимый жанр? Под номером: ${i + 1}`)
+    personalMovieDB.genres[i] = prompt(`Ваш любимый жанр? Под номером: ${i + 1}`).trim();
     if (personalMovieDB.genres[i] == null || personalMovieDB.genres[i] == '' || Number(+personalMovieDB.genres[i])) {
       i--;
     }
